@@ -1,0 +1,101 @@
+// Variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$font-family-base: 'Arial', sans-serif;
+$spacing-unit: 1rem;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (max-width: 768px) { @content; }
+  } @else if $breakpoint == mobile {
+    @media (max-width: 480px) { @content; }
+  }
+}
+
+// Base styles
+body {
+  font-family: $font-family-base;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+// Container
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-unit;
+}
+
+// Button styles
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &-primary {
+    background-color: $primary-color;
+    color: white;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  &-secondary {
+    background-color: $secondary-color;
+    color: white;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+}
+
+// Grid system
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: $spacing-unit;
+
+  @include responsive(tablet) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @include responsive(mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Card component
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: $spacing-unit;
+
+  &__header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: $spacing-unit;
+  }
+
+  &__body {
+    color: $secondary-color;
+  }
+}
+
+// Utility classes
+.text-center { text-align: center; }
+.mt-1 { margin-top: $spacing-unit; }
+.mb-1 { margin-bottom: $spacing-unit; }
+.p-1 { padding: $spacing-unit; } 
