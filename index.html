@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fit Workout - Your personal fitness companion. Get energized with our Workout A and Workout B routines. Perfect for home workouts and fitness enthusiasts.">
+    <meta name="keywords" content="fit workout, fitness, home workout, exercise routine, workout A, workout B, fitness app, workout tracker">
+    <meta name="author" content="Fit Workout">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Fit Workout - Your Personal Fitness Companion">
+    <meta property="og:description" content="Get energized with our Workout A and Workout B routines. Perfect for home workouts and fitness enthusiasts.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://[your-github-username].github.io/fit-workout">
+    <title>Fit Workout - Your Personal Fitness Companion</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.min.js"></script>
+    <link rel="canonical" href="https://[your-github-username].github.io/fit-workout">
+</head>
+<body>
+    <div id="yt-bg-wrap" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;overflow:hidden;pointer-events:none;">
+        <iframe id="yt-bg" src="https://www.youtube.com/embed/5CuWcIXy5TQ?autoplay=1&mute=1&controls=0&loop=1&playlist=5CuWcIXy5TQ&modestbranding=1&showinfo=0&rel=0&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width:100vw;height:100vh;position:absolute;top:0;left:0;object-fit:cover;filter:brightness(0.5) blur(2px);"></iframe>
+        <div style="position:absolute;top:0;left:0;width:100vw;height:100vh;background:rgba(30,40,60,0.45);"></div>
+    </div>
+    <div id="three-bg"></div>
+    <header class="main-header">
+        <div class="header-content" style="justify-content:center;">
+            <span class="logo" style="display:flex;align-items:center;gap:12px;font-size:2.2em;">
+                <span style="font-size:1.2em;"></span> Fit Workout <span style="font-size:1.2em;"></span>
+            </span>
+        </div>
+        <nav style="text-align:center;margin-top:8px;">
+            <a href="#home" onclick="showHome()">Home</a>
+            <a href="#workoutA" onclick="showWorkout('A')">Workout A</a>
+            <a href="#workoutB" onclick="showWorkout('B')">Workout B</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" id="home">
+            <h1>Welcome to Fit Workout!</h1>
+            <p class="hero-desc">Get energized, get moving, and have fun! Choose your workout and unleash your best self. Every rep, every jump, every day—let's make fitness awesome together! 🚀</p>
+            <div class="cta-buttons">
+                <button class="workout-btn" onclick="showWorkout('A')">WORKOUT A</button>
+                <button class="workout-btn" onclick="showWorkout('B')">WORKOUT B</button>
+            </div>
+            <div class="tips schedule-card">
+                <strong>Weekly Schedule:</strong>
+                <ul>
+                    <li><b>Monday, Wednesday, Friday:</b> Workout A</li>
+                    <li><b>Tuesday, Thursday, Saturday:</b> Workout B</li>
+                    <li><b>Sunday:</b> Rest</li>
+                </ul>
+            </div>
+        </section>
+        <section class="workout-section" id="workoutA" style="display:none;">
+            <div class="workout-card">
+                <h2>WORKOUT A</h2>
+                <ul id="workoutA-list">
+                    <li><input type="checkbox" class="ex-check" data-workout="A" data-index="0"> 100 Skipping  <a class="exercise-link" href="https://cdn.dribbble.com/userupload/22490822/file/original-1f0724820d614ec045f63b429b15a4f4.gif" target="_blank">Video</a></li>
+                    <li><input type="checkbox" class="ex-check" data-workout="A" data-index="1"> 15 Squats <a class="exercise-link" href="https://images.squarespace-cdn.com/content/v1/54f9e84de4b0d13f30bba4cb/1530743652042-8AW6T0MPM6Q0JYEV6AO9/image-asset.gif" target="_blank">Video</a></li>
+                    <li><input type="checkbox" class="ex-check" data-workout="A" data-index="2"> 14 Lunges <a class="exercise-link" href="https://media.tenor.com/fWiC9Ze5eUMAAAAM/lunges-exercise.gif" target="_blank">Video</a></li>
+                    <li><input type="checkbox" class="ex-check" data-workout="A" data-index="3"> 12 Bulgarian Split-Squats <a class="exercise-link" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlWWUEnW8894H5_CFJtJxViNXcDtjY1CYlCg&s" target="_blank">Video</a></li>
+                    <li><input type="checkbox" class="ex-check" data-workout="A" data-index="4"> 30 Calf Raises <a class="exercise-link" href="https://i.pinimg.com/originals/2f/7c/ca/2f7cca8d37c65384c1d0bd84cc0a91d1.gif" target="_blank">Video</a></li>
+                    <li><input type="checkbox" class="ex-check" data-workout="A" data-index="5"> 25 Glute Bridge Marches <a class="exercise-link" href="https://i.pinimg.com/originals/2d/e6/3f/2de63f3d651ad75fd7e79ad3a3dd697c.gif" target="_blank">Video</a></li>
+                    <li><input type="checkbox" class="ex-check" data-workout="A" data-index="6"> 16 Step-Ups <a class="exercise-link" href="https://hips.hearstapps.com/hmg-prod/images/workouts/2016/03/stepup-1457044957.gif" target="_blank">Video</a></li>
+                    <li><input type="checkbox" class="ex-check" data-workout="A" data-index="7"> 20 Squat Jumps <a class="exercise-link" href="https://cdn.jefit.com/assets/img/exercises/gifs/476.gif" target="_blank">Video</a></li>
+                    <li><input type="checkbox" class="ex-check" data-workout="A" data-index="8"> 1-Min Wall Sit <a class="exercise-link" href="https://media3.giphy.com/media/1xOO7cd3hHLr4kzOqP/giphy.gif?cid=6c09b952vb5ieyux4hhspcj5rnyu7ogo2qrwh9u9cx5s4y7e&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" target="_blank">Video</a></li>
+                    <li><input type="checkbox" class="ex-check" data-workout="A" data-index="9"> 20 Power Skips <a class="exercise-link" href="https://fitnessprogramer.com/wp-content/uploads/2021/09/Power-Skips.gif" target="_blank">Video</a></li>
+                </ul>
+                <div class="tips">
+                    <strong>Tips:</strong>
+                    <ul>
+                        <li>Use weights if reps feel too easy.</li>
+                        <li>Rest 1 minute and 30 seconds between sets.</li>
+                        <li>Repeat each workout 3 times.</li>
+                    </ul>
+                </div>
+                <a href="#" class="back-link" onclick="showHome()">&larr; Back to Home</a>
+            </div>
+        </section>
+        <section class="workout-section" id="workoutB" style="display:none;">
+            <div class="workout-card">
+                <h2>WORKOUT B</h2>
+                <ul id="workoutB-list">
+                    <li><input type="checkbox" class="ex-check" data-workout="B" data-index="0"> 100 Skipping  <a class="exercise-link" href="https://cdn.dribbble.com/userupload/22490822/file/original-1f0724820d614ec045f63b429b15a4f4.gif" target="_blank">Video</a></li>
+                    <li><input type="checkbox" class="ex-check" data-workout="B" data-index="1"> 15 Push-Ups <a class="exercise-link" href="https://i.pinimg.com/originals/7e/51/8f/7e518fbecfdebefe167b7d222a692efd.gif" target="_blank">Video</a></li>
+                    <li><input type="checkbox" class="ex-check" data-workout="B" data-index="2"> 1-Min Plank <a class="exercise-link" href="https://cdn.jefit.com/assets/img/exercises/gifs/631.gif" target="_blank">Video</a></li>
+                    <li><input type="checkbox" class="ex-check" data-workout="B" data-index="3"> 10 Diamond Push-Ups <a class="exercise-link" href="https://i.pinimg.com/originals/00/2f/9a/002f9a315be7db7b0f0a79ca81e1f5d5.gif" target="_blank">Video</a></li>
+                    <li><input type="checkbox" class="ex-check" data-workout="B" data-index="4"> 14 Wide-Grip Push-Ups <a class="exercise-link" href="https://www.inspireusafoundation.org/wp-content/uploads/2022/11/wide-arm-push-ups.gif" target="_blank">Video</a></li>
+                    <li><input type="checkbox" class="ex-check" data-workout="B" data-index="5"> 1-Min Reverse Plank <a class="exercise-link" href="https://newlife.com.cy/wp-content/uploads/2019/11/08671301-Reverse-plank_Back_360.gif" target="_blank">Video</a></li>
+                    <li><input type="checkbox" class="ex-check" data-workout="B" data-index="6"> 20 Sit-Ups <a class="exercise-link" href="https://i.pinimg.com/originals/c6/e1/6a/c6e16a9b9dc7d97b0d4ad78b50e7b424.gif" target="_blank">Video</a></li>
+                    <li><input type="checkbox" class="ex-check" data-workout="B" data-index="7"> 12 Dips <a class="exercise-link" href="https://cdn.jefit.com/assets/img/exercises/gifs/229.gif" target="_blank">Video</a></li>
+                    <li><input type="checkbox" class="ex-check" data-workout="B" data-index="8"> 10 Pull-Ups <a class="exercise-link" href="https://media.tenor.com/bOA5VPeUz5QAAAAM/noequipmentexercisesmen-pullups.gif" target="_blank">Video</a></li>
+                    <li><input type="checkbox" class="ex-check" data-workout="B" data-index="9"> 20 Incline Push-Ups <a class="exercise-link" href="https://fitnessprogramer.com/wp-content/uploads/2021/06/Incline-Push-Up.gif" target="_blank">Video</a></li>
+                    <li><input type="checkbox" class="ex-check" data-workout="B" data-index="10"> 8 Decline Push-Ups <a class="exercise-link" href="https://hips.hearstapps.com/hmg-prod/images/workouts/2016/03/feetelevatedpushup-1457047025.gif" target="_blank">Video</a></li>
+                </ul>
+                <div class="tips">
+                    <strong>Tips:</strong>
+                    <ul>
+                        <li>Use weights if reps feel too easy.</li>
+                        <li>Rest 1 minute and 30 seconds between sets.</li>
+                        <li>Repeat each workout 3 times.</li>
+                    </ul>
+                </div>
+                <a href="#" class="back-link" onclick="showHome()">&larr; Back to Home</a>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <span style="font-size:1.2em;">&copy; 2024 Fit Workout</span>
+            <div style="margin:10px 0 0 0;font-size:1.05em;">"Sweat. Smile. Repeat."</div>
+            <div style="margin-top:10px;">
+                <a href="https://www.instagram.com/" target="_blank" style="margin:0 8px;font-size:1.4em;">📸</a>
+                <a href="https://www.youtube.com/" target="_blank" style="margin:0 8px;font-size:1.4em;">▶️</a>
+                <a href="https://www.tiktok.com/" target="_blank" style="margin:0 8px;font-size:1.4em;">🎵</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function showWorkout(type) {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('workoutA').style.display = type === 'A' ? 'block' : 'none';
+            document.getElementById('workoutB').style.display = type === 'B' ? 'block' : 'none';
+        }
+        function showHome() {
+            document.getElementById('home').style.display = 'block';
+            document.getElementById('workoutA').style.display = 'none';
+            document.getElementById('workoutB').style.display = 'none';
+            
+            // Clear all checkboxes
+            document.querySelectorAll('.ex-check').forEach(cb => {
+                cb.checked = false;
+            });
+            // Clear saved progress
+            localStorage.removeItem('workoutA_progress');
+            localStorage.removeItem('workoutB_progress');
+        }
+        // Auto-save and restore checkboxes
+        function saveProgress() {
+            const checksA = Array.from(document.querySelectorAll('#workoutA-list .ex-check')).map(cb => cb.checked);
+            const checksB = Array.from(document.querySelectorAll('#workoutB-list .ex-check')).map(cb => cb.checked);
+            localStorage.setItem('workoutA_progress', JSON.stringify(checksA));
+            localStorage.setItem('workoutB_progress', JSON.stringify(checksB));
+        }
+        function restoreProgress() {
+            const checksA = JSON.parse(localStorage.getItem('workoutA_progress') || '[]');
+            const checksB = JSON.parse(localStorage.getItem('workoutB_progress') || '[]');
+            document.querySelectorAll('#workoutA-list .ex-check').forEach((cb, i) => { cb.checked = !!checksA[i]; });
+            document.querySelectorAll('#workoutB-list .ex-check').forEach((cb, i) => { cb.checked = !!checksB[i]; });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            restoreProgress();
+            document.querySelectorAll('.ex-check').forEach(cb => {
+                cb.addEventListener('change', saveProgress);
+            });
+        });
+        // --- three.js animated background ---
+        (function(){
+            const container = document.getElementById('three-bg');
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({alpha:true, antialias:true});
+            renderer.setClearColor(0x000000, 0); // transparent
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            container.appendChild(renderer.domElement);
+            // Add lights
+            const light1 = new THREE.PointLight(0xfff200, 1, 100);
+            light1.position.set(10, 10, 10);
+            scene.add(light1);
+            const light2 = new THREE.PointLight(0xf7971e, 1, 100);
+            light2.position.set(-10, -10, 10);
+            scene.add(light2);
+            // Add multiple colorful shapes
+            const shapes = [];
+            // Torus
+            const torus = new THREE.Mesh(
+                new THREE.TorusGeometry(2, 0.5, 16, 100),
+                new THREE.MeshStandardMaterial({ color: 0xf7971e, metalness: 0.7, roughness: 0.2 })
+            );
+            torus.position.set(-3, 0, 0);
+            scene.add(torus);
+            shapes.push(torus);
+            // Sphere
+            const sphere = new THREE.Mesh(
+                new THREE.SphereGeometry(1.2, 32, 32),
+                new THREE.MeshStandardMaterial({ color: 0x1e3c72, metalness: 0.6, roughness: 0.3 })
+            );
+            sphere.position.set(3, 0, 0);
+            scene.add(sphere);
+            shapes.push(sphere);
+            // Cone
+            const cone = new THREE.Mesh(
+                new THREE.ConeGeometry(1, 2, 32),
+                new THREE.MeshStandardMaterial({ color: 0xffd200, metalness: 0.5, roughness: 0.4 })
+            );
+            cone.position.set(0, 2.5, 0);
+            scene.add(cone);
+            shapes.push(cone);
+            // Dodecahedron
+            const dode = new THREE.Mesh(
+                new THREE.DodecahedronGeometry(1.1),
+                new THREE.MeshStandardMaterial({ color: 0xff4e50, metalness: 0.7, roughness: 0.2 })
+            );
+            dode.position.set(0, -2.5, 0);
+            scene.add(dode);
+            shapes.push(dode);
+            camera.position.z = 8;
+            function animate() {
+                requestAnimationFrame(animate);
+                torus.rotation.x += 0.01;
+                torus.rotation.y += 0.012;
+                sphere.rotation.y += 0.013;
+                cone.rotation.x += 0.012;
+                cone.rotation.z += 0.01;
+                dode.rotation.x += 0.011;
+                dode.rotation.y += 0.009;
+                renderer.render(scene, camera);
+            }
+            animate();
+            // Responsive resize
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+        })();
+    </script>
+</body>
+</html> 
